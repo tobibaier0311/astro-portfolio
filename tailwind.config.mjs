@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -9,7 +11,11 @@ export default {
       lightgreen: "#595f39",
       darkgreen: "#283618",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Raleway", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
