@@ -1,13 +1,11 @@
 ---
-import { CiMail } from "react-icons/ci";
 import Container from "./Container.astro";
-import { VscMail } from "react-icons/vsc";
 import PrimaryButton from "./buttons/PrimaryButton.astro";
 ---
 
 <Container>
   <div
-    class="flex flex-col items-center justify-center h-[100vh] gap-12 text-center"
+    class="flex flex-col items-center justify-center h-[100vh] gap-12 text-center pt-16"
   >
     <div class="space-y-4">
       <p class="text-5xl">
@@ -25,7 +23,9 @@ import PrimaryButton from "./buttons/PrimaryButton.astro";
         src="/assets/CV_Bild.jpg"
         alt="Profile Picture"
       />
-      <PrimaryButton text={"Contact Me!"} />
+      <a href="mailto:tobiasbaier00@gmail.com"
+        ><PrimaryButton text={"Contact Me!"} /></a
+      >
     </div>
   </div>
 </Container>
