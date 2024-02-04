@@ -1,0 +1,22 @@
+---
+import { projects } from "../utils/projects";
+
+import Container from "./Container.astro";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<Container>
+  <section id="projects">
+    <div class="text-earth font-bold text-5xl my-12">projects</div>
+    <div class="space-y-12">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Container>
