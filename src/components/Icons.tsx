@@ -48,9 +48,13 @@ const technologies = [
 export default function Icons() {
   return (
     <Container>
-      <div className="grid grid-cols-2 gap-2 mx-6 text-lg">
+      <div className="grid grid-cols-2 gap-2 text-lg">
         {technologies.map((item) => (
-          <div id={item.name} className="flex gap-3 items-center">
+          <div
+            key={item.name}
+            id={item.name}
+            className="flex gap-3 items-center"
+          >
             {item.icon}
             {item.name}
           </div>

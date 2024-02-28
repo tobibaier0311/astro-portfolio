@@ -34,7 +34,7 @@ export default function HeroIcons() {
   return (
     <div className="flex gap-6 items-center justify-center lg:justify-normal">
       {icons.map((icon) => (
-        <IconButton href={icon.href} icon={icon.icon} />
+        <IconButton key={icon.href} href={icon.href} icon={icon.icon} />
       ))}
     </div>
   );
