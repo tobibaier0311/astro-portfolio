@@ -11,11 +11,6 @@ export default {
       lightgreen: "#595f39",
       darkgreen: "#283618",
     },
-    extend: {
-      fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-      },
-    },
   },
   plugins: [],
 };

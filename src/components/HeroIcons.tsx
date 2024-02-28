@@ -1,16 +1,11 @@
 import { SiGithub } from "react-icons/si";
-import { SiLinkedin } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 import type { ReactNode } from "react";
 
 const icons = [
   {
-    href: "https://www.google.com",
+    href: "https://github.com/tobibaier0311",
     icon: <SiGithub />,
-  },
-  {
-    href: "https://www.google.com",
-    icon: <SiLinkedin />,
   },
   {
     href: "mailto:tobiasbaier00@gmail.com",
@@ -37,7 +32,7 @@ const IconButton = ({ href, icon }: IconButtonProps) => {
 
 export default function HeroIcons() {
   return (
-    <div className="flex gap-6 items-center">
+    <div className="flex gap-6 items-center justify-center lg:justify-normal">
       {icons.map((icon) => (
         <IconButton href={icon.href} icon={icon.icon} />
       ))}
