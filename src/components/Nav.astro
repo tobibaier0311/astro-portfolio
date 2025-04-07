@@ -1,12 +1,18 @@
 ---
 import Container from "./Container.astro";
+import { getLangFromUrl, useTranslations } from "../utils/language";
+import LanguagePicker from "./LanguagePicker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="py-4 lg:py-8 inset-x-0 top-0 fixed bg-2 w-full">
   <Container>
     <nav class="flex h-12 items-center justify-center gap-12 text-sm">
-      <a href="#about">about</a>
-      <a href="#projects">projects</a>
+      <a href="">{t("nav.about")}</a>
+      <a href="">{t("nav.home")}</a>
+      <LanguagePicker />
     </nav>
   </Container>
 </section>

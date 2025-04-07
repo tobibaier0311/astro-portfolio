@@ -1,5 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "../utils/language";
 import HeroIcons from "./HeroIcons";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div
@@ -11,7 +15,7 @@ import HeroIcons from "./HeroIcons";
       Tobi Baier
     </p>
     <p class="text-md max-w-96">
-      aspiring frontend developer based in passau/regensburg, germany.
+      {t("hero.description")}
     </p>
     <HeroIcons />
   </div>
