@@ -21,7 +21,7 @@ interface IconButtonProps {
 const IconButton = ({ href, icon }: IconButtonProps) => {
   return (
     <a
-      className="text-2xl text-earth hover:text-white py-6 transition-colors duration-500"
+      className="text-2xl text-4 hover:text-5 py-6 transition-colors duration-500"
       href={href}
       target="_blank"
     >
