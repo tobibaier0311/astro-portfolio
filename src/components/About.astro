@@ -1,5 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "../utils/language";
 import Container from "./Container.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Container>
