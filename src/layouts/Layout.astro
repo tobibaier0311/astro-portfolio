@@ -18,7 +18,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -27,26 +27,29 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="text-5 font-light text-sm">
-    <Nav />
-    <slot />
-  </body>
+  <body class="m-0 p-0 box-border bg-gray-100 overflow-hidden min-h-screen">
+    <div
+      class="flex flex-col h-[calc(100vh-96px)] w-[calc(100vw-96px)] m-12 border border-black overflow-hidden"
+    >
+      <Nav />
+      <slot />
+    </div>
+  </body><style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: "Poppins", sans-serif;
+      background-size: 224px;
+      background: #f0eee6;
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: "Poppins", sans-serif;
-    background-size: 224px;
-    background: #f0eee6;
-  }
-</style>
