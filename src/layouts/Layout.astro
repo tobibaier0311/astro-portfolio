@@ -9,8 +9,11 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
-import { getLangFromUrl } from "../i18n/utils";
-import LanguagePicker from "../components/LanguagePicker.astro";
+import {
+  getLangFromUrl,
+  getRouteFromUrl,
+  useTranslatedPath,
+} from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -19,6 +22,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const translatePath = useTranslatedPath(lang);
+const route = getRouteFromUrl(Astro.url);
 ---
 
 <!doctype html>
@@ -31,13 +36,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="m-0 p-0 box-border bg-gray-100 overflow-hidden min-h-screen">
+  <body class="m-0 p-0 box-border bg-brand-2 overflow-hidden min-h-screen">
     <div
       class="flex flex-col h-[calc(100vh-96px)] w-[calc(100vw-96px)] m-12 border border-black overflow-hidden"
     >
       <Nav />
       <slot />
-      <LanguagePicker />
     </div>
   </body><style is:global>
     :root {

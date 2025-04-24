@@ -1,30 +1,36 @@
 ---
 import {
   getLangFromUrl,
+  getRouteFromUrl,
   useTranslatedPath,
   useTranslations,
 } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
+const route = getRouteFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<nav class="absolute top-0 right-0 mt-6 mr-[96px] z-10">
-  <ul class="flex space-x-4 text-sm font-medium text-gray-700">
-    <li><a href={translatePath("/")}>{t("nav.home")}</a></li>
-    <li><a href={translatePath("/about/")}>{t("nav.about")}</a></li>
-    <li><a href={translatePath("/projects/")}>{t("nav.projects")}</a></li>
-  </ul>
+<nav class="absolute top-0 left-0 right-0 mt-4 z-10">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <ul
+      class="flex justify-between items-center text-sm font-medium text-gray-700"
+    >
+      <div class="flex items-center space-x-4">
+        <li><a href={translatePath("/")}>{t("nav.home")}</a></li>
+        <li><a href={translatePath("/about/")}>{t("nav.about")}</a></li>
+        <li><a href={translatePath("/projects/")}>{t("nav.projects")}</a></li>
+      </div>
+      <li class="flex items-center space-x-4">
+        <a href={translatePath(`/${route ?? ""}`, "de")}>
+          <img src="/assets/de.svg" alt="Deutsch" class="w-5 h-auto" />
+        </a>
+        <div class="h-3 w-px bg-brand-5"></div>
+        <a href={translatePath(`/${route ?? ""}`, "en")}>
+          <img src="/assets/gb.svg" alt="English" class="w-5 h-auto" />
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
-<!--
-<section class="py-4 lg:py-8 inset-x-0 top-0 fixed bg-2 w-full">
-  <Container>
-    <nav class="flex h-12 items-center justify-center gap-12 text-sm">
-      <a href="">{t("nav.about")}</a>
-      <a href="">{t("nav.home")}</a>
-      <LanguagePicker />
-    </nav>
-  </Container>
-</section>
--->
