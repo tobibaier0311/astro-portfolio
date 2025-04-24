@@ -9,12 +9,7 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
-import {
-  getLangFromUrl,
-  getRouteFromUrl,
-  useTranslatedPath,
-} from "../i18n/utils";
-import { ClientRouter } from "astro:transitions";
+import { getLangFromUrl } from "../i18n/utils";
 import CommonHead from "@/components/CommonHead.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -22,10 +17,6 @@ const lang = getLangFromUrl(Astro.url);
 interface Props {
   title: string;
 }
-
-const { title } = Astro.props;
-const translatePath = useTranslatedPath(lang);
-const route = getRouteFromUrl(Astro.url);
 ---
 
 <!doctype html>
@@ -34,10 +25,10 @@ const route = getRouteFromUrl(Astro.url);
     <CommonHead />
   </head>
   <body class="m-0 p-0 box-border bg-brand-2 overflow-hidden min-h-screen">
+    <Nav />
     <div
-      class="flex flex-col h-[calc(100vh-96px)] w-[calc(100vw-96px)] m-12 border border-black overflow-hidden"
+      class="flex h-[calc(100vh-96px)] w-[calc(100vw-96px)] m-12 border border-black overflow-hidden"
     >
-      <Nav />
       <slot />
     </div>
   </body><style is:global>

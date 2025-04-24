@@ -1,10 +1,5 @@
 ---
-import { fade, slide } from "astro:transitions";
 import Container from "./Container.astro";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <Container>
