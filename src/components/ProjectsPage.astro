@@ -1,14 +1,18 @@
 ---
 import { projects } from "../utils/projects";
+import { ClientRouter, fade, slide } from "astro:transitions";
 
 import Container from "./Container.astro";
 import ProjectCard from "./ProjectCard.astro";
 ---
 
 <Container>
-  <section id="projects" class="mt-48">
-    <div class="text-2 font-bold text-5xl mb-12">projects</div>
-    <div class="space-y-12">
+  <section id="projects">
+    <div class="text-2 font-bold text-5xl" transition:animate="fade">
+      projects
+    </div>
+
+    <div class="leading-7 space-y-12 pt-6" transition:animate="slide">
       {
         projects.map((project) => (
           <ProjectCard
