@@ -1,25 +1,34 @@
 ---
-import { projects } from "../utils/projects";
-
 import Container from "./Container.astro";
 import ProjectCard from "./ProjectCard.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import WebWelleImage from "../images/webwelle.png";
+import BbafImage from "../images/baierbuam.png";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <Container>
-  <section id="projects">
+  <section id="projects" class="space-y-8">
     <div class="text-2 font-bold text-5xl" transition:animate="fade">
-      projects
+      {t("projects.title")}
     </div>
-
-    <div class="leading-7 space-y-12 pt-6" transition:animate="slide">
-      {
-        projects.map((project) => (
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-          />
-        ))
-      }
+    <div
+      class="grid grid-cols-2 leading-7 space-y-12 pt-6"
+      transition:animate="fade"
+    >
+      <ProjectCard
+        title={t("projects.webwelle.title")}
+        description={t("projects.webwelle.description")}
+        src={WebWelleImage}
+        alt="Radio Webwelle"
+      />
+      <ProjectCard
+        title={t("projects.bbaf.title")}
+        description={t("projects.bbaf.description")}
+        src={BbafImage}
+        alt="BaierBuam And Friends"
+      />
     </div>
   </section>
 </Container>

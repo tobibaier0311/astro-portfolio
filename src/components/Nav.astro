@@ -23,12 +23,12 @@ const translatePath = useTranslatedPath(lang);
         <li><a href={translatePath("/projects/")}>{t("nav.projects")}</a></li>
       </div>
       <li class="flex items-center space-x-4">
-        <a href={translatePath(`/${route ?? ""}`, "de")}>
-          <img src="/assets/de.svg" alt="Deutsch" class="w-5 h-auto" />
-        </a>
-        <div class="h-3 w-px bg-brand-5"></div>
         <a href={translatePath(`/${route ?? ""}`, "en")}>
           <img src="/assets/gb.svg" alt="English" class="w-5 h-auto" />
+        </a>
+        <div class="h-3 w-px bg-brand-5"></div>
+        <a href={translatePath(`/${route ?? ""}`, "de")}>
+          <img src="/assets/de.svg" alt="Deutsch" class="w-5 h-auto" />
         </a>
       </li>
     </ul>

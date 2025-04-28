@@ -1,8 +1,17 @@
 ---
-const { title, description } = Astro.props;
+import { Image } from "astro:assets";
+
+const { title, description, src } = Astro.props;
 ---
 
 <div class="">
   <div class="text-lg">{title}</div>
   <div>{description}</div>
+  <Image
+    src={src}
+    alt="Webwelle"
+    class="rounded-lg mt-4"
+    width={400}
+    height={300}
+  />
 </div>

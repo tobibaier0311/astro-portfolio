@@ -16,19 +16,36 @@ export const routes = {
 
 export const ui = {
   en: {
-    "nav.home": "Home",
-    "nav.about": "About",
-    "nav.projects": "Projects",
+    "nav.home": "home",
+    "nav.about": "about",
+    "nav.projects": "projects",
     "about.title": "about",
     "about.description":
       "My first professional work experience was from October 2022 - February 2023 as a Frontend Development Intern at a Data Science startup located in Salzburg, Austria.",
+    "about.technologies": "Here are technologies I mainly work with:",
+    "projects.title": "projects",
+    "projects.webwelle.title": "Radio Webwelle",
+    "projects.webwelle.description":
+      "Website for the Internet Radio Station of the Deggendorf Institute of Technology. You can listen to hundreds of radio shows, podcasts etc. made & produced by students.",
+    "projects.bbaf.title": "BaierBuam And Friends - Website",
+    "projects.bbaf.description":
+      "Website for the BaierBuam and Friends. Here you can find the latest news, events and much more.",
   },
   de: {
-    "nav.home": "Home",
-    "nav.about": "Über",
-    "nav.projects": "Projekte",
-    "about.title": "about",
+    "nav.home": "home",
+    "nav.about": "über mich",
+    "nav.projects": "projekte",
+    "about.title": "über mich",
     "about.description":
       "Meine erste berufliche Erfahrung war von Oktober 2022 bis Februar 2023 als Frontend-Entwicklungspraktikant in einem Data-Science-Startup in Salzburg, Österreich.",
+    "about.technologies":
+      "Hier sind Technologien, mit denen ich hauptsächlich arbeite:",
+    "projects.title": "projekte",
+    "projects.webwelle.title": "Radio Webwelle",
+    "projects.webwelle.description":
+      "Website für den Internetradiosender der Hochschule Deggendorf. Hier können Sie Hunderte von Radiosendungen, Podcasts usw. hören, die von Studenten gemacht und produziert wurden.",
+    "projects.bbaf.title": "BaierBuam And Friends - Website",
+    "projects.bbaf.description":
+      "Website für die BaierBuam und Freunde. Hier können Sie die neuesten Nachrichten, Veranstaltungen und vieles mehr finden.",
   },
 } as const;
