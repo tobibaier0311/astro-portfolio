@@ -25,13 +25,9 @@ interface Props {
   <head>
     <CommonHead />
   </head>
-  <body class="m-0 p-0 box-border bg-brand-2 overflow-hidden min-h-screen">
+  <body class="m-0 p-0 box-border bg-brand-2 border-brand-3">
     <Nav />
-    <div
-      class="h-[calc(100vh-96px)] w-[calc(100vw-96px)] m-12 border border-brand-3 overflow-hidden"
-    >
-      <slot />
-    </div>
+    <slot />
   </body><style is:global>
     :root {
       --accent: 136, 58, 234;

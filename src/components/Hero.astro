@@ -1,16 +1,21 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import HeroIcons from "./HeroIcons";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div
-  class="flex flex-col items-center justify-center gap-12 text-center lg:flex-row lg:text-left border border-3"
+  class="flex flex-col justify-center items-center gap-12 h-full lg:flex-row text-left"
 >
-  <div class="space-y-4">
-    <p class="text-4xl font-medium">
-      <!-- Hi, <span class="text-2">Tobi</span> here. -->
-      Tobi Baier
-    </p>
-    <p class="text-md max-w-96">hero.description</p>
+  <div class="space-y-6">
+    <!-- Hi, <span class="text-2">Tobi</span> here. -->
+    <div class="text-8xl text-brand-4 font-extralight space-y-8">
+      <p>{t("hero.hi")} {t("hero.tobi")} {t("hero.here")}</p>
+    </div>
+
+    <p class="text-md max-w-96 font-extralight">{t("hero.description")}</p>
     <HeroIcons />
   </div>
 

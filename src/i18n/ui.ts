@@ -16,6 +16,12 @@ export const routes = {
 
 export const ui = {
   en: {
+    "hero.hi": "Hi,",
+    "hero.tobi": "Tobi",
+    "hero.here": "here.",
+    "hero.description":
+      "Aspiring Frontend Developer with the goal to create beautiful and user-friendly websites.",
+    "hero.cta": "let's connect",
     "nav.home": "home",
     "nav.about": "about",
     "nav.projects": "projects",
@@ -32,6 +38,12 @@ export const ui = {
       "Website for the BaierBuam and Friends. Here you can find the latest news, events and much more.",
   },
   de: {
+    "hero.hi": "Hi,",
+    "hero.tobi": "Tobi",
+    "hero.here": "hier.",
+    "hero.description":
+      "Angehender Frontend-Entwickler mit dem Ziel, schöne und benutzerfreundliche Websites zu kreieren.",
+    "hero.cta": "lass uns verbinden",
     "nav.home": "home",
     "nav.about": "über mich",
     "nav.projects": "projekte",

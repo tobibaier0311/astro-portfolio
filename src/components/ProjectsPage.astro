@@ -1,5 +1,4 @@
 ---
-import Container from "./Container.astro";
 import ProjectCard from "./ProjectCard.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import WebWelleImage from "../images/webwelle.png";
@@ -8,27 +7,15 @@ import BbafImage from "../images/baierbuam.png";
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<Container>
-  <section id="projects" class="space-y-8">
-    <div class="text-2 font-bold text-5xl" transition:animate="fade">
-      {t("projects.title")}
-    </div>
-    <div
-      class="grid grid-cols-2 leading-7 space-y-12 pt-6"
-      transition:animate="fade"
-    >
-      <ProjectCard
-        title={t("projects.webwelle.title")}
-        description={t("projects.webwelle.description")}
-        src={WebWelleImage}
-        alt="Radio Webwelle"
-      />
-      <ProjectCard
-        title={t("projects.bbaf.title")}
-        description={t("projects.bbaf.description")}
-        src={BbafImage}
-        alt="BaierBuam And Friends"
-      />
-    </div>
-  </section>
-</Container>
+<div class="grid grid-rows-2 grid-cols-2 gap-8">
+  <div>
+    <p>{t("projects.webwelle.title")}</p>
+    <p>{t("projects.webwelle.description")}</p>
+    <img src="" alt="img" />
+  </div>
+  <div>
+    <p>{t("projects.bbaf.title")}</p>
+    <p>{t("projects.bbaf.description")}</p>
+    <img src="" alt="img" />
+  </div>
+</div>
