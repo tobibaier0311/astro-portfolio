@@ -1,21 +1,47 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import WebWelleImage from "../images/webwelle.png";
-import BbafImage from "../images/baierbuam.png";
+import WebWelleImage from "../images/webwelle2.jpeg";
+import BbafImage from "../images/bbaf2.jpeg";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<div class="grid grid-rows-2 grid-cols-2 gap-8">
-  <div>
-    <p>{t("projects.webwelle.title")}</p>
-    <p>{t("projects.webwelle.description")}</p>
-    <img src="" alt="img" />
+<div class="grid grid-cols-2 grid-flow-row gap-16 font-extralight">
+  <div class="flex flex-col space-y-6">
+    <p class="text-4xl text-brand-4">
+      {t("projects.webwelle.title")}
+    </p>
+    <p>
+      {t("projects.webwelle.description")}
+    </p>
+    <a
+      class="underline underline-offset-4"
+      href="https://radio-webwelle.de"
+      target="_blank">{t("projects.bbaf.cta")}</a
+    >
   </div>
-  <div>
-    <p>{t("projects.bbaf.title")}</p>
+  <img
+    transition:animate="slide"
+    class="justify-self-center self-center rounded-md p-4"
+    src={WebWelleImage.src}
+    alt="img"
+  />
+  <div class="flex flex-col space-y-6">
+    <p class="text-4xl text-brand-4">
+      {t("projects.bbaf.title")}
+    </p>
     <p>{t("projects.bbaf.description")}</p>
-    <img src="" alt="img" />
+    <a
+      class="underline underline-offset-4"
+      href="https://baierbuamandfriends.de"
+      target="_blank">{t("projects.bbaf.cta")}</a
+    >
   </div>
+  <img
+    transition:animate="slide"
+    class="justify-self-center self-center rounded-md p-4"
+    src={BbafImage.src}
+    alt="img"
+  />
 </div>
