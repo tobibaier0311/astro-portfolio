@@ -4,10 +4,6 @@ import type { ReactNode } from "react";
 
 const icons = [
   {
-    href: "https://github.com/tobibaier0311",
-    icon: <SiGithub />,
-  },
-  {
     href: "mailto:tobiasbaier00@gmail.com",
     icon: <MdEmail />,
   },
