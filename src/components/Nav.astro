@@ -20,9 +20,21 @@ const translatePath = useTranslatedPath(lang);
       class="flex justify-between items-center text-sm font-light text-gray-700"
     >
       <div class="flex items-center space-x-8">
-        <li><a href={translatePath("/")}>{t("nav.home")}</a></li>
-        <li><a href={translatePath("/about/")}>{t("nav.about")}</a></li>
-        <li><a href={translatePath("/projects/")}>{t("nav.projects")}</a></li>
+        <li>
+          <a
+            class="text-brand-5 hover:text-brand-4 transition-colors duration-500"
+            href={translatePath("/")}>{t("nav.home")}</a>
+        </li>
+        <li>
+          <a
+            class="text-brand-5 hover:text-brand-4 transition-colors duration-500"
+            href={translatePath("/about/")}>{t("nav.about")}</a>
+        </li>
+        <li>
+          <a
+            class="text-brand-5 hover:text-brand-4 transition-colors duration-500"
+            href={translatePath("/projects/")}>{t("nav.projects")}</a>
+        </li>
       </div>
       <li class="flex items-center space-x-4">
         <a href={translatePath(`/${route ?? ""}`, "en")}>

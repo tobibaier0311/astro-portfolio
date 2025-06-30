@@ -1,11 +1,12 @@
 import { SiGithub } from "react-icons/si";
-import { MdEmail } from "react-icons/md";
+import { CiMail } from "react-icons/ci";
+
 import type { ReactNode } from "react";
 
 const icons = [
   {
     href: "mailto:tobiasbaier00@gmail.com",
-    icon: <MdEmail />,
+    icon: <CiMail />,
   },
 ];
 
@@ -14,13 +15,9 @@ interface IconButtonProps {
   icon: ReactNode;
 }
 
-const IconButton = ({ href, icon }: IconButtonProps) => {
+const IconButton = ({ icon }: IconButtonProps) => {
   return (
-    <a
-      className="text-2xl text-4 hover:text-5 py-6 transition-colors duration-500"
-      href={href}
-      target="_blank"
-    >
+    <a className="text-xl " href="mailto:tobiasbaier00@gmail.com">
       {icon}
     </a>
   );
@@ -28,7 +25,8 @@ const IconButton = ({ href, icon }: IconButtonProps) => {
 
 export default function HeroIcons() {
   return (
-    <div className="flex gap-6 items-center justify-center lg:justify-normal">
+    <div className="flex gap-4 items-center hover:text-brand-4 transition-colors duration-500 font-extralight cursor-pointer">
+      contact me
       {icons.map((icon) => (
         <IconButton key={icon.href} href={icon.href} icon={icon.icon} />
       ))}

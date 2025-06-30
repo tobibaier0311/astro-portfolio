@@ -3,7 +3,6 @@ import ProjectCard from "./ProjectCard.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import WebWelleImage from "../images/webwelle2.jpeg";
 import BbafImage from "../images/bbaf2.jpeg";
-import FloatingLogos from "./FloatingLogos.tsx";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
@@ -17,7 +16,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       {t("projects.webwelle.description")}
     </p>
     <a
-      class="underline underline-offset-4"
+      class="underline underline-offset-4 text-brand-5 hover:text-brand-4 transition-colors duration-500"
       href="https://radio-webwelle.de"
       target="_blank">{t("projects.bbaf.cta")}</a
     >
@@ -34,7 +33,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
     </p>
     <p>{t("projects.bbaf.description")}</p>
     <a
-      class="underline underline-offset-4"
+      class="underline underline-offset-4 text-brand-5 hover:text-brand-4 transition-colors duration-500"
       href="https://baierbuamandfriends.de"
       target="_blank">{t("projects.bbaf.cta")}</a
     >

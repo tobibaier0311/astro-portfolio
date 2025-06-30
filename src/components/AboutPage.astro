@@ -1,38 +1,49 @@
 ---
-import Container from "./Container.astro";
-import Icons from "./Icons";
+// about.astro
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import { motion } from "framer-motion";
-import LogoBubble from "./LogoBubble";
+import LogoBubble from "./LogoBubble.tsx";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<div class="flex justify-center items-center gap-12 h-full text-left">
-  <div id="about" class="space-y-6 bg-brand-2/60 backdrop-blur-sm p-6">
-    <p class="text-6xl font-extralight text-brand-4">{t("about.title")}</p>
-    <p class="text-md font-extralight" transition:animate="fade">
-      Im Laufe meines Bachelorstudiums habe ich meine Begeisterung für
-      Frontend-Entwicklung entdeckt – seitdem bin ich voll dabei und immer
-      neugierig, Neues dazuzulernen.
-    </p>
-    <p class="text-md font-extralight" transition:animate="fade">
-      Ich mag es, Dinge nicht nur zum Laufen zu bringen, sondern sie auch gut
-      aussehen zu lassen – ob durch sauberen Code oder durch ein stimmiges
-      Design.
-    </p>
-    <p class="text-md font-extralight" transition:animate="fade">
-      Erste praktische Erfahrungen konnte ich während meines Praxissemesters in
-      Salzburg sammeln, wo ich an spannenden Webprojekten mitarbeiten durfte.
-    </p>
-    <p class="text-md font-extralight" transition:animate="fade">
-      Besonders stolz bin ich auf zwei Websites, die ich umgesetzt habe – allen
-      voran www.radio-webwelle.de, meine Bachelorarbeit. Das Projekt habe ich
-      komplett eigenständig entwickelt:
-    </p>
-    <p class="text-md font-extralight" transition:animate="fade">
-      Vom ersten Konzept bis zur fertigen Website.
-    </p>
+<div class="w-full flex justify-center px-4">
+  <div class="relative max-w-3xl bg-brand-2 overflow-visible">
+    <!-- LogoBubble: z-0 -->
+    <div
+      class="absolute z-0 left-0 bottom-0 pointer-events-none"
+      style="width: 300px; height: 300px; transform: translate(-150px, 150px);"
+    >
+      <LogoBubble client:load />
+    </div>
+
+    <!-- Text-Inhalt: z-10 -->
+    <div id="about" class="relative z-10 space-y-6 p-6 bg-brand-2">
+      <p class="text-6xl font-extralight text-brand-4">
+        {t("about.title")}
+      </p>
+      <p class="text-md font-extralight">
+        Im Laufe meines Bachelorstudiums habe ich meine Begeisterung für
+        Frontend-Entwicklung entdeckt – seitdem bin ich voll dabei und immer
+        neugierig, Neues dazuzulernen.
+      </p>
+      <p class="text-md font-extralight">
+        Ich mag es, Dinge nicht nur zum Laufen zu bringen, sondern sie auch gut
+        aussehen zu lassen – ob durch sauberen Code oder durch ein stimmiges
+        Design.
+      </p>
+      <p class="text-md font-extralight">
+        Erste praktische Erfahrungen konnte ich während meines Praxissemesters
+        in Salzburg sammeln, wo ich an spannenden Webprojekten mitarbeiten
+        durfte.
+      </p>
+      <p class="text-md font-extralight">
+        Besonders stolz bin ich auf zwei Websites, die ich umgesetzt habe –
+        allen voran www.radio-webwelle.de, meine Bachelorarbeit. Das Projekt
+        habe ich komplett eigenständig entwickelt:
+      </p>
+      <p class="text-md font-extralight">
+        Vom ersten Konzept bis zur fertigen Website.
+      </p>
+    </div>
   </div>
 </div>
-<LogoBubble />
