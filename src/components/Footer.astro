@@ -1,0 +1,39 @@
+---
+import {
+  getLangFromUrl,
+  getRouteFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const route = getRouteFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<nav
+  class="fixed bottom-0 left-0 right-0 py-2 z-10 bg-brand-2 border-b border-brand-3 text-sm"
+>
+  <div class="max-w-screen-xl mx-auto">
+    <div
+      class="flex justify-between items-center text-sm font-light text-gray-700"
+    >
+      <p>Made with &#10084; in Regensburg, Bavaria</p>
+      <ul class="flex items-center space-x-8">
+        <li>
+          <a
+            class="text-brand-5 hover:text-brand-4 transition-colors duration-500"
+            href={translatePath("/imprint/")}>{t("imprint.title")}</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-brand-5 hover:text-brand-4 transition-colors duration-500"
+            href={translatePath("/privacy/")}>{t("privacy.title")}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

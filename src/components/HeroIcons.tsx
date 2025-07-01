@@ -1,6 +1,4 @@
-import { SiGithub } from "react-icons/si";
 import { CiMail } from "react-icons/ci";
-
 import type { ReactNode } from "react";
 
 const icons = [
@@ -11,8 +9,8 @@ const icons = [
 ];
 
 interface IconButtonProps {
-  href: string;
-  icon: ReactNode;
+  text?: string;
+  icon?: ReactNode;
 }
 
 const IconButton = ({ icon }: IconButtonProps) => {
@@ -23,12 +21,12 @@ const IconButton = ({ icon }: IconButtonProps) => {
   );
 };
 
-export default function HeroIcons() {
+export default function HeroIcons({ text }: IconButtonProps) {
   return (
-    <div className="flex gap-4 items-center hover:text-brand-4 transition-colors duration-500 font-extralight cursor-pointer">
-      contact me
+    <div className="flex gap-4 items-center  font-extralight cursor-pointer">
+      {text}
       {icons.map((icon) => (
-        <IconButton key={icon.href} href={icon.href} icon={icon.icon} />
+        <IconButton key={icon.href} icon={icon.icon} />
       ))}
     </div>
   );

@@ -37,6 +37,9 @@ export const ui = {
     "projects.bbaf.description":
       "Website for the BaierBuam and Friends. Here you can find the latest news, events and much more.",
     "projects.bbaf.cta": "visit",
+    "imprint.title": "Imprint",
+    "privacy.title": "Privacy Policy",
+    "contact.me": "contact me",
   },
   de: {
     "hero.hi": "Hi,",
@@ -61,5 +64,8 @@ export const ui = {
     "projects.bbaf.description":
       "Website für die BaierBuam und Freunde. Hier können Sie die neuesten Nachrichten, Veranstaltungen und vieles mehr finden.",
     "projects.bbaf.cta": "besuchen",
+    "imprint.title": "Impressum",
+    "privacy.title": "Datenschutzerklärung",
+    "contact.me": "Schreib mir",
   },
 } as const;
