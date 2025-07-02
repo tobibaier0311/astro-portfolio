@@ -7,7 +7,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <div class="w-full flex justify-center px-4">
-  <div class="relative max-w-3xl bg-brand-2 overflow-visible">
+  <div class="relative lg:max-w-3xl bg-brand-2 overflow-visible">
     <!-- LogoBubble: z-0 -->
     <div
       class="absolute z-0 left-0 bottom-0 pointer-events-none"
@@ -22,27 +22,19 @@ const t = useTranslations(getLangFromUrl(Astro.url));
         {t("about.title")}
       </p>
       <p class="text-md font-extralight">
-        Im Laufe meines Bachelorstudiums habe ich meine Begeisterung für
-        Frontend-Entwicklung entdeckt – seitdem bin ich voll dabei und immer
-        neugierig, Neues dazuzulernen.
+        {t("about.one")}
       </p>
       <p class="text-md font-extralight">
-        Ich mag es, Dinge nicht nur zum Laufen zu bringen, sondern sie auch gut
-        aussehen zu lassen – ob durch sauberen Code oder durch ein stimmiges
-        Design.
+        {t("about.two")}
       </p>
       <p class="text-md font-extralight">
-        Erste praktische Erfahrungen konnte ich während meines Praxissemesters
-        in Salzburg sammeln, wo ich an spannenden Webprojekten mitarbeiten
-        durfte.
+        {t("about.three")}
       </p>
       <p class="text-md font-extralight">
-        Besonders stolz bin ich auf zwei Websites, die ich umgesetzt habe –
-        allen voran www.radio-webwelle.de, meine Bachelorarbeit. Das Projekt
-        habe ich komplett eigenständig entwickelt:
+        {t("about.five")}
       </p>
       <p class="text-md font-extralight">
-        Vom ersten Konzept bis zur fertigen Website.
+        {t("about.four")}
       </p>
     </div>
   </div>

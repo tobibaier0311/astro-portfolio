@@ -11,6 +11,7 @@ import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import CommonHead from "@/components/CommonHead.astro";
+import Footer from "@/components/Footer.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -28,6 +29,7 @@ interface Props {
   <body class="flex justify-center items-center h-screen">
     <Nav />
     <div><slot /></div>
+    <Footer />
   </body><style is:global>
     :root {
       --accent: 136, 58, 234;

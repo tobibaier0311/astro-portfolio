@@ -1,32 +1,55 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import HeroIcons from "./HeroIcons";
+import { LiaDownloadSolid } from "react-icons/lia";
+import { AiOutlineMail } from "react-icons/ai";
+import IconButton from "@/components/IconButton.tsx";
 
+// Sprache aus URL extrahieren und Übersetzungen holen
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <div
-  class="flex flex-col justify-center items-center gap-12 h-full lg:flex-row text-left"
+  class="flex flex-col justify-center items-center gap-12 font-extralight lg:flex-row"
 >
-  <div class="space-y-6 font-extralight">
-    <!-- Hi, <span class="text-2">Tobi</span> here. -->
-    <div class="text-8xl text-brand-4 space-y-8">
-      <p>{t("hero.hi")} {t("hero.tobi")} {t("hero.here")}</p>
+  <div class="space-y-6">
+    <div class="text-center text-8xl text-brand-4 space-y-8 lg:text-left">
+      <p>
+        {t("hero.hi")}
+        <span class="text-brand-4">{t("hero.tobi")}</span>
+        {t("hero.here")}
+      </p>
     </div>
 
-    <p class="text-md max-w-96">{t("hero.description")}</p>
-    <div
-      class="flex items-center gap-3 hover:text-brand-4 transition-colors duration-500 cursor-pointer underline-offset-8 decoration-1 underline"
+    <p
+      class="sm:justify-self-center lg:justify-self-start text-md max-w-96 text-center lg:text-left"
     >
-      <HeroIcons text={t("contact.me")} />
+      {t("hero.description")}
+    </p>
+
+    <div
+      class="flex flex-row justify-center gap-4 lg:flex-row lg:items-center lg:justify-self-start"
+    >
+      <!-- E-Mail Button -->
+      <IconButton
+        href="mailto:tobiasbaier00@gmail.com"
+        download={false}
+        text={t("contact.me")}
+      />
+
+      <!-- Optional: Lebenslauf Button -->
+      <IconButton
+        href="/assets/CV-TobiasBaier.pdf"
+        download={true}
+        text={t("download.cv")}
+        downloadIcon
+      />
     </div>
   </div>
 
   <img
     class="object-cover w-64 h-64 rounded-full border-4"
     src="/images/profile-bw-min.JPG"
-    alt=""
+    alt="Profilbild von Tobi"
   />
-  <!-- /assets/CV_Bild.jpg -->
 </div>
