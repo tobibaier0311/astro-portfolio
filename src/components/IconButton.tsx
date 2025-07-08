@@ -18,7 +18,7 @@ const IconButton = ({
 }: IconButtonProps) => {
   return (
     <a
-      className="flex justify-start items-center gap-1 font-extralight text-sm cursor-pointer hover:text-brand-4 transition-colors duration-500"
+      className="flex justify-start items-center gap-2 font-extralight text-xs cursor-pointer hover:text-brand-4 transition-colors duration-500 border rounded-md px-2 py-2 hover:bg-brand-1/50 border-brand-4 hover:border-brand-4"
       href={href}
       download={download}
     >
