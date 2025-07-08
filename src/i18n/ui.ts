@@ -72,7 +72,7 @@ export const ui = {
       "Ich mag es, Dinge nicht nur zum Laufen zu bringen, sondern sie auch gut aussehen zu lassen – ob durch sauberen Code oder durch ein stimmiges Design.",
     "about.three":
       "Erste praktische Erfahrungen konnte ich während meines Praxissemesters in Salzburg sammeln, wo ich an spannenden Webprojekten mitarbeiten durfte.",
-    "about.four": "Vom ersten Konzept bis zur fertigen Website",
+    "about.four": "Vom ersten Konzept bis zur fertigen Website.",
     "about.five":
       "Besonders stolz bin ich auf zwei Websites, die ich umgesetzt habe – allen voran www.radio-webwelle.de, meine Bachelorarbeit. Das Projekt habe ich komplett eigenständig entwickelt.",
     "projects.title": "projekte",
